@@ -1,0 +1,44 @@
+.analysis-container {
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    /* Spacing and background */
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+  
+    /* Typography */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    color: #000000;
+    font-size: 15px;
+  }
+  
+  .analysis-container p {
+    margin: 8px 0;
+  }
+  
+  /* The main heading (Analysis) */
+  .analysis-container a:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-decoration: none;
+  }
+  
+  /* The subheading (In depth insights...) */
+  .analysis-container p:nth-child(2) {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  /* Image styling */
+  .analysis-container img {
+    max-width: 100%;
+    height: auto;
+    border: 0; /* Remove any default border if present */
+  }
+  

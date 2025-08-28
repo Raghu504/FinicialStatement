@@ -1,0 +1,47 @@
+.container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin-top: 60px;
+  }
+  
+  .month-selector {
+    margin-bottom: 1rem;
+  }
+  
+  .month-selector button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: #eda7a7;
+    cursor: pointer;
+  }
+  
+  .month-selector .active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .cash-flow-details {
+    margin-top: 20px;
+  }
+  
+  .cash-flow-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+  }
+  
+  .cash-flow-item strong {
+    width: 60%;
+  }
+  
+  .highlight {
+    background: #efe2ad;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,131 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-page background */
+.main1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://source.unsplash.com/1600x900/?finance,technology") no-repeat center center/cover;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(70, 45, 45, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Logo Container */
+.logo-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Logo */
+.logo1 {
+  width: 100px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+/* Login Title */
+.login {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.form-button:hover {
+  background: #0056b3;
+}
+
+/* Signup Text */
+.form-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Signup Link */
+.form-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .form-container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .login {
+      font-size: 1.8rem;
+  }
+
+  .form-button {
+      font-size: 1rem;
+  }
+}

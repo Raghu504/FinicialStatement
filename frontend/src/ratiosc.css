@@ -1,0 +1,288 @@
+/* Ratios Page Styles - Financial Analysis Dashboard */
+
+.ratios-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  z-index: 1;
+  margin-top: 80px;
+}
+
+/* Background with financial image */
+body {
+  background: linear-gradient(rgba(26, 51, 83, 0.8), rgba(26, 51, 83, 0.6)),
+              url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.ratios-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1565514020179-026b5f8b4d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.ratios-container h2 {
+  font-size: 2.2rem;
+  color: #1a3353;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.ratios-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a3353, #2563eb);
+  border-radius: 2px;
+}
+
+.ratios-container > p {
+  color: #475569;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ratios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.ratio-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ratio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #1a3353, #2563eb);
+  border-radius: 4px 0 0 4px;
+}
+
+.ratio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ratio-card h3 {
+  color: #1a3353;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ratio-card p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+.ratio-card button {
+  background: linear-gradient(135deg, #2563eb, #1a3353);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.ratio-card button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #0f172a);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.ratio-card button:active {
+  transform: translateY(0);
+}
+
+/* Specific styling for different ratio cards */
+.ratio-card:nth-child(1) {
+  border-top: 4px solid #ef4444;
+}
+
+.ratio-card:nth-child(2) {
+  border-top: 4px solid #22c55e;
+}
+
+.ratio-card:nth-child(3) {
+  border-top: 4px solid #eab308;
+}
+
+.ratio-card:nth-child(4) {
+  border-top: 4px solid #6366f1;
+}
+
+.ratio-card:nth-child(5) {
+  border-top: 4px solid #0ea5e9;
+}
+
+/* Financial icon styling */
+.ratio-card::after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+.ratio-card:nth-child(1)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ef4444'%3E%3Cpath d='M12 6v12m-8-6h16'/%3E%3C/svg%3E");
+}
+
+.ratio-card:nth-child(2)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Cpath d='M2 20h20V10H2v10zm2-8h16v6H4v-6zM16 4H8v4h8V4z'/%3E%3C/svg%3E");
+}
+
+.ratio-card:nth-child(3)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23eab308'%3E%3Cpath d='M5 9.5l4 3 4-6 6 11H5z'/%3E%3C/svg%3E");
+}
+
+.ratio-card:nth-child(4)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M7 20h2V10H7v10zm8-18h2v18h-2V2zm-4 13h2V5h-2v10z'/%3E%3C/svg%3E");
+}
+
+.ratio-card:nth-child(5)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'%3E%3Cpath d='M3 4h18v2H3V4zm0 15h14v2H3v-2zm0-5h18v2H3v-2zm0-5h14v2H3V9z'/%3E%3C/svg%3E");
+}
+
+/* No ratios available state */
+.no-ratios {
+  grid-column: 1 / -1;
+  padding: 3rem;
+  text-align: center;
+  color: #64748b;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 2px dashed #cbd5e1;
+  font-size: 1.1rem;
+}
+
+/* Animation for cards */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ratio-card {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+.ratio-card:nth-child(1) { animation-delay: 0.1s; }
+.ratio-card:nth-child(2) { animation-delay: 0.2s; }
+.ratio-card:nth-child(3) { animation-delay: 0.3s; }
+.ratio-card:nth-child(4) { animation-delay: 0.4s; }
+.ratio-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ratios-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .ratios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ratio-card p {
+    min-height: auto;
+  }
+}
+
+/* Financial stats header */
+.financial-stats-header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1a3353, #2563eb);
+  margin: -2.5rem -2.5rem 2rem;
+  padding: 2rem 2.5rem;
+  border-radius: 12px 12px 0 0;
+  color: white;
+}
+
+.financial-stats-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.financial-stats-header p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stats-item {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .financial-stats-header {
+    flex-direction: column;
+    gap: 1rem;
+    margin: -1.5rem -1.5rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .stats-item {
+    text-align: left;
+  }
+}

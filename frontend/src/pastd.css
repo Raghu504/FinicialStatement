@@ -1,0 +1,352 @@
+/* Past Data Visualization Styles - Financial Analysis Dashboard */
+
+.past-data-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin-top: 120px;
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  
+  .past-data-container h2 {
+    font-size: 2rem;
+    color: #1a3353;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .past-data-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a3353, #2563eb);
+    border-radius: 2px;
+  }
+  
+  .chart-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .chart-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart-section h3 {
+    font-size: 1.4rem;
+    color: #1a3353;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 4px solid #2563eb;
+  }
+  
+  .chart-container {
+    height: 400px;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Custom tooltip styling */
+  .custom-tooltip {
+    background-color: rgba(26, 51, 83, 0.9) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 1rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .custom-tooltip .label {
+    color: #e2e8f0 !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .custom-tooltip .desc {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+  }
+  
+  .custom-tooltip .intro {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Legend styling */
+  .recharts-legend-item {
+    margin-right: 1.5rem !important;
+  }
+  
+  .recharts-legend-item-text {
+    font-size: 0.9rem !important;
+    color: #475569 !important;
+    font-weight: 500 !important;
+  }
+  
+  /* Chart color customization */
+  .income-bar {
+    fill: #4f46e5 !important; /* Indigo */
+  }
+  
+  .expenses-bar {
+    fill: #ef4444 !important; /* Red */
+  }
+  
+  .debt-bar {
+    fill: #f97316 !important; /* Orange */
+  }
+  
+  .investments-bar {
+    fill: #22c55e !important; /* Green */
+  }
+  
+  .loan-bar {
+    fill: #0ea5e9 !important; /* Blue */
+  }
+  
+  /* Line chart customization */
+  .investments-line {
+    stroke: #22c55e !important;
+    stroke-width: 3px !important;
+  }
+  
+  .loan-line {
+    stroke: #0ea5e9 !important;
+    stroke-width: 3px !important;
+  }
+  
+  .recharts-dot {
+    fill: #ffffff !important;
+    stroke-width: 2px !important;
+  }
+  
+  .investments-dot {
+    stroke: #22c55e !important;
+  }
+  
+  .loan-dot {
+    stroke: #0ea5e9 !important;
+  }
+  
+  /* Axis styling */
+  .recharts-cartesian-axis-line {
+    stroke: #cbd5e1 !important;
+  }
+  
+  .recharts-cartesian-axis-tick-line {
+    stroke: #cbd5e1 !important;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 0.8rem !important;
+    fill: #64748b !important;
+  }
+  
+  /* Grid styling */
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: #e2e8f0 !important;
+    stroke-dasharray: 3 3 !important;
+  }
+  
+  /* No data state */
+  .no-data-container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e1;
+    margin: 1.5rem 0;
+  }
+  
+  .no-data-icon {
+    font-size: 3rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+  }
+  
+  .no-data-message {
+    font-size: 1.1rem;
+    color: #64748b;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  /* Financial insights panel */
+  .insights-panel {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .insight-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .insight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .insight-title {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .insight-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a3353;
+    margin-bottom: 0.5rem;
+  }
+  
+  .insight-trend {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+  
+  .trend-up {
+    color: #22c55e;
+  }
+  
+  .trend-down {
+    color: #ef4444;
+  }
+  
+  .trend-neutral {
+    color: #9ca3af;
+  }
+  
+  .trend-icon {
+    margin-right: 0.5rem;
+  }
+  
+  /* Time period selector */
+  .time-selector {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+  }
+  
+  .time-selector button {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    color: #64748b;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .time-selector button:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+  }
+  
+  .time-selector button.active {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .past-data-container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  
+    .chart-section {
+      padding: 1rem;
+    }
+  
+    .chart-container {
+      height: 300px;
+    }
+  
+    .insights-panel {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .time-selector {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .past-data-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .chart-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .insights-panel {
+      grid-template-columns: 1fr;
+    }
+  
+    .time-selector button {
+      padding: 0.4rem 0.7rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .past-data-container {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .chart-section {
+      page-break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #e5e7eb;
+    }
+  
+    .chart-container {
+      max-height: 350px;
+    }
+  
+    .time-selector {
+      display: none;
+    }
+  }
+  

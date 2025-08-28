@@ -1,0 +1,161 @@
+/* Header Container */
+.header-container2 {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Inner container */
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 24px;
+  }
+  
+  /* Logo styles */
+  .logo-container1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-container1:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+  
+  /* Navigation */
+  .nav-items1 ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-link1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .nav-link1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link1:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link1:hover::after {
+    width: 80%;
+  }
+  
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Logout button */
+  .logout-button1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+  }
+  
+  .logout-button1:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-items1 ul {
+      gap: 16px;
+    }
+  
+    .nav-text1 {
+      display: none;
+    }
+  
+    .nav-link1 {
+      padding: 8px;
+    }
+  
+    .logout-button1 {
+      padding: 8px;
+    }
+  
+    .logout-button1 .nav-text1 {
+      display: none;
+    }
+  
+    .company-name {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header-container2 {
+    animation: fadeIn 0.5s ease-out;
+  }

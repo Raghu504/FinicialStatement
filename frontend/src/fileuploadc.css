@@ -1,0 +1,129 @@
+/* File Upload Component Styles */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  margin-top: 120px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1a3353;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  color: #546880;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  border: 2px dashed #cfd8e3;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #2563eb;
+  background-color: #f0f7ff;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.file-label:hover {
+  background-color: #1d4ed8;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.upload-box p {
+  margin: 1rem 0;
+  color: #4b5563;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  background-color: #1a3353;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 51, 83, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Animation for file selection */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.file-selected {
+  animation: pulse 1.5s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .upload-box {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

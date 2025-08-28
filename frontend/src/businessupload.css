@@ -1,0 +1,74 @@
+.business-upload-container {
+    /* Center the container on the page */
+    width: 600px;
+    margin: 20px auto;
+    padding: 24px;
+    margin-top: 80px;
+    /* Card-like appearance */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  
+    /* Text settings */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  .business-upload-container h1,
+  .business-upload-container h2,
+  .business-upload-container h3,
+  .business-upload-container p {
+    margin-bottom: 16px;
+  }
+  
+  /* Top title or heading */
+  .business-upload-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Sub-headings or section labels */
+  .business-upload-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Paragraph or instructions */
+  .business-upload-container p {
+    font-size: 0.95rem;
+  }
+  
+  /* The file input styling */
+  .business-upload-container .file-input {
+    display: inline-block;
+    margin: 8px 0;
+  }
+  
+  .business-upload-container .file-input label {
+    /* Button-like styling */
+    padding: 8px 16px;
+    background-color: #007bff; /* A blue color */
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .business-upload-container .file-input input[type="file"] {
+    display: none; /* Hide the default file input */
+  }
+  
+  /* Image styling */
+  .business-upload-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 16px;
+  
+    /* Optional border or background for the image */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 8px;
+  }
+  
